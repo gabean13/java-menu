@@ -19,17 +19,17 @@ public enum Category {
     }
 
     public static String randomMenu(Category category, List<String> inedibleFoods, List<String> eatenFoods) {
-        while(true) {
-            String menu  = Randoms.shuffle(category.menus).get(0);
-            if(!inedibleFoods.contains(menu) && !eatenFoods.contains(menu)){
+        while (true) {
+            String menu = Randoms.shuffle(category.menus).get(0);
+            if (!inedibleFoods.contains(menu) && !eatenFoods.contains(menu)) {
                 return menu;
             }
         }
     }
 
     public static Category getCategory(int id) {
-        for(Category category : Category.values()) {
-            if(category.id == id) {
+        for (Category category : Category.values()) {
+            if (category.id == id) {
                 return category;
             }
         }

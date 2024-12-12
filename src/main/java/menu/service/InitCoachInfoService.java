@@ -7,7 +7,7 @@ import menu.model.Coach;
 public class InitCoachInfoService {
     public List<Coach> saveCoachNames(String nameInput) {
         List<Coach> coaches = new ArrayList<>();
-        for(String name : nameInput.split(",")) {
+        for (String name : nameInput.split(",")) {
             coaches.add(new Coach(name.trim()));
         }
 
